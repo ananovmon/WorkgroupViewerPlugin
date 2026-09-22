@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Plugin PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Plugin certificationLevel="None" displayName="WorkGroup Info Plugin"
+	minSystemVersion="8.0" name="WorkGroupInfoPlugin" version="1.4">
+	<Attributes>
+		<Map>
+			<entry key="minUpgradableVersion" value="1.0" />
+			<entry key="restResources">
+				<value>
+					<List>
+						<String>com.sailpoint.plugin.workgroupinfoplugin.rest.WorkgroupInfoPluginRestManager</String>
+					</List>
+				</value>
+			</entry>
+			<entry key="scriptPackages">
+				<value>
+					<List>
+						<String>com.sailpoint.plugin.workgroupinfoplugin.rest</String>
+					</List>
+				</value>
+			</entry>
+			<entry key="snippets">
+				<value>
+					<List>
+						<Snippet regexPattern=".*(accessRequest|identityRequest).*" rightRequired="workgroupinfopluginRight">
+							<Scripts>
+								<String>ui/js/accessRequest.js</String>
+							</Scripts>
+							<StyleSheets>
+								<String>ui/css/accessRequest.css</String>
+							</StyleSheets>
+						</Snippet>
+					</List>
+				</value>
+			</entry>
+		</Map>
+	</Attributes>
+</Plugin>
